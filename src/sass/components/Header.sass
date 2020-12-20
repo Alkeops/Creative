@@ -1,0 +1,71 @@
+@import ../base/variables
+@import ../mixins/mixinBreakpoint
+.header
+    height: 110px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 25px
+    position: relative
+    @include media('Tablet')
+        height: 178px
+        padding: 0 39px
+    @include media('Desktop')
+        padding: 0 165px
+    .boton
+        display: block
+        @include media('Tablet')
+            display: none
+    .nav
+        width: 252px
+        position: absolute
+        top: 100%
+        right: 26px
+        display: flex
+        background: $bgNegro
+        flex-direction: column
+        align-items: center
+        transform: scaleY(0)
+        transform-origin: top
+        transition: .3s
+        padding-bottom: 28px
+        a
+            margin-top: 32px
+            cursor: pointer
+            &:last-of-type
+                margin-bottom: 32px
+        @include media('Tablet')
+            padding-bottom: 0
+            position: inherit
+            transform: scaleY(1)
+            flex-direction: row
+            top: 0
+            right: 0
+            width: 438px
+            height: 100%
+            margin-right: -39px
+            background: $rojo
+            padding-left: 40px
+            a
+                font-size: 15px
+                margin: 0
+                margin-right: 22px
+                &:last-of-type
+                    margin: 0
+                    margin-right: 22px
+            .btn-red
+                background: $negro
+                font-size: 16px
+                padding: 23px 21px 20px 19px
+        @include media('Desktop')
+            margin-right: -165px
+            width: 705px
+            padding-left: 69px
+            .btn-red
+                padding: 23px 47px 20px 45px
+            a
+                font-size: 16px
+                margin-right: 34px
+    .nav-active
+        transform: scaleY(1)

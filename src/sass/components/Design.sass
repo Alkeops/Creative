@@ -1,0 +1,60 @@
+@import ../base/variables
+@import ../mixins/mixinBreakpoint
+.design
+    @include media('Tablet')
+        display: flex
+    &__image
+        background: url("../../assets/mobile/image-strategic.jpg") no-repeat
+        height: 200px
+        background-size: cover
+        position: relative
+        .wave
+            height: 28px
+            width: 68.5px
+            position: absolute
+            bottom: -14px
+            left: 24px
+            right: 0
+        @include media('Tablet')
+            width: 50%
+            height: 658px
+            background: url("../../assets/tablet/image-strategic.jpg") no-repeat
+            background-size: cover
+            .wave
+                top: 145px
+                left: calc(100% - 34px)
+        @include media('Desktop')
+            width: 51%
+            background: url("../../assets/desktop/image-strategic.jpg") no-repeat
+            background-size: cover
+            height: 984px
+            .wave
+                top: 234px
+                width: 134px
+                height: 60px
+                left: calc(100% - (134px/2)
+    &__text
+        background: $bgNegro
+        color: $blanco
+        padding: 72px 24px
+        h2
+            span
+                color: $rojo
+        @include media('Tablet')
+            width: 50%
+            padding: 120px 40px 0px 64px
+            h2
+                width: 150px
+                margin-bottom: 29px
+            p
+                margin-bottom: 37px
+        @include media('Desktop')
+            width: 49%
+            padding: 200px 105px 0px 154px
+            h2
+                width: 250px
+                margin-bottom: 38px
+            p
+                margin-bottom: 56px
+        .btn-line
+            padding-bottom: 6px

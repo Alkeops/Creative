@@ -1,5 +1,8 @@
-const Boton = ({ className, content }) => (
-  <button className={className}>{content}</button>
+const Boton = ({ className, content, href }) => (
+  <a className={`btn ${className}`} href={href}>
+    {/* Pensado como un boton en un principio */}
+    {content}
+  </a>
 );
 
 export default Boton;

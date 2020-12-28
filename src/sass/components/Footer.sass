@@ -1,0 +1,29 @@
+@import ../mixins/mixinBreakpoint
+footer
+    padding: 100px 24px
+    position: relative
+    .wave
+        display: none
+    h2
+        font-weight: 400
+        margin-bottom: 44px
+    @include media('Tablet')
+        padding: 70px 40px 98px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        h2
+            width: 390px
+            margin: 0
+        .btn-red
+            height: 64
+            display: flex
+            align-items: center
+    @include media('Desktop')
+        padding: 120px 165px 110px
+        h2
+            width: 550px
+        .wave
+            display: block
+            position: absolute
+            left: -60px

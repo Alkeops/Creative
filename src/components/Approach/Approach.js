@@ -2,7 +2,7 @@ import Point from "./Point";
 
 const Approach = () => {
   return (
-    <section className="approach">
+    <section className="approach" id="service">
       <div className="points">
         <h2 className="title">Our approach for creating a winning brand</h2>
         <Point title="Brand Strategy" num="01">

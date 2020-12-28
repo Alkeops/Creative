@@ -2,7 +2,7 @@ import Boton from "../common/Boton";
 
 const Branding = () => {
   return (
-    <section className="branding">
+    <section className="branding" id="about">
       <div className="branding__image"></div>
       <div className="wrapper">
         <div className="branding__text">
@@ -12,7 +12,11 @@ const Branding = () => {
             website design solutions for small businesses, giving lasting
             impressions to audiences in a digital world.
           </p>
-          <Boton className="btn-red" content="Learn More" />
+          <Boton
+            className="btn-red"
+            content="Learn More"
+            href="https://wa.link/xry6dz"
+          />
         </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ const Slider = () => {
     }
   };
   return (
-    <section className="slider">
+    <section className="slider" id="projects">
       <div className="slider__name">
         <h2>
           Brand

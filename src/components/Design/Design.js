@@ -16,7 +16,11 @@ const Design = () => {
           and brand awareness. We are firm believers that success lies in
           creative collaboration with our clients."
         </p>
-        <Boton className="btn-line" content="Schelude a call" />
+        <Boton
+          className="btn-line"
+          content="Schelude a call"
+          href="https://wa.link/xry6dz"
+        />
       </div>
     </section>
   );

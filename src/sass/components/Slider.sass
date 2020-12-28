@@ -1,0 +1,124 @@
+@import ../mixins/mixinBreakpoint
+@import ../base/variables
+.slider
+    position: relative
+    display: flex
+    flex-direction: column
+    @include media('Tablet')
+        flex-direction: row
+    &__name
+        order: 2
+        background: $bgNegro
+        color: $blanco
+        height: 272px
+        display: flex
+        justify-content: center
+        padding: 0 100px 0 24px
+        flex-direction: column
+        @include media('Tablet')
+            padding: 0 100px 0 39px
+        @include media('Desktop')
+            padding: 0 120px 0 165px
+        .controles
+            margin-top: 20px
+            svg
+                margin-right: 16px
+            @include media('Tablet')
+                margin-top: 29px
+            @include media('Desktop')
+                margin-top: 46px
+        .wavy
+            position: absolute
+            z-index: 99
+            display: none
+            @include media('Tablet')
+                display: block
+                right: -65px
+                top: 125px
+                transform: scale(.5)
+            @include media('Desktop')
+                transform: scale(1)
+                top: 186px
+        @include media('Tablet')
+            order: 0
+            height: 352px
+            width: 50%
+            position: absolute
+            z-index: 1
+        @include media('Desktop')
+            height: 528px
+            width: 51%
+    &__content
+        position: relative
+        height: 404px
+        width: 100%
+        color: white
+        .info
+            position: absolute
+            bottom: 35px
+            right: 32px
+            p
+                margin: 0
+                &:last-child
+                    text-align: right
+            @include media('Tablet')
+                right: 40px
+                bottom: 45px
+            @include media('Desktop')
+                right: 154px
+                bottom: 76px
+        &:before
+            content: ""
+            height: 50%
+            width: 100%
+            background-color: rgba(0,0,0,0.04)
+            background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,1) 100%)
+            position: absolute
+            bottom: 0
+        @include media('Tablet')
+            height: 472px
+            width: 57%
+            right: -43%
+        @include media('Desktop')
+            width: 62%
+            right: -38%
+            height: 728px
+    .slider1
+        background: url("../../assets/mobile/image-slide-1.jpg") no-repeat
+        animation: fade .8s ease
+        background-size: cover
+        @include media('Tablet')
+            background-image: url("../../assets/tablet/image-slide-1.jpg")
+        @include media('Desktop')
+            background-image: url("../../assets/desktop/image-slide-1.jpg")
+    .slider2
+        background: url("../../assets/mobile/image-slide-2.jpg") no-repeat
+        animation: fade2 .8s ease
+        background-size: cover
+        @include media('Tablet')
+            background-image: url("../../assets/tablet/image-slide-2.jpg")
+        @include media('Desktop')
+            background-image: url("../../assets/desktop/image-slide-2.jpg")
+    .slider3
+        background: url("../../assets/mobile/image-slide-3.jpg") no-repeat
+        animation: fade3 .8s ease
+        background-size: cover
+        @include media('Tablet')
+            background-image: url("../../assets/tablet/image-slide-3.jpg")
+        @include media('Desktop')
+            background-image: url("../../assets/desktop/image-slide-3.jpg")
+@keyframes fade
+    from
+        opacity: .4
+    to
+        opacity: 1
+@keyframes fade2
+    from
+        opacity: .4
+    to
+        opacity: 1
+@keyframes fade3
+    from
+        opacity: .4
+    to
+        opacity: 1

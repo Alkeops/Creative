@@ -2,6 +2,7 @@ import Approach from "./Approach/Approach";
 import Branding from "./Branding/Branding";
 import Design from "./Design/Design";
 import Header from "./Header/Header";
+import Slider from "./Slider/Slider";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Branding />
         <Design />
         <Approach />
+        <Slider />
       </main>
     </>
   );
